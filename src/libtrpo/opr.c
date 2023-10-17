@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "opr.h"
 
-static int opr1()
+int opr1()
 {
     int v = 0;
     printf("______________________________________________________________\n");
@@ -16,7 +16,7 @@ static int opr1()
     return (v);
 }
 
-static int opr2(int m)
+int opr2(int m)
 {
     int s = 0;
     printf("____________________________________________________________\n");
@@ -42,7 +42,7 @@ static int opr2(int m)
     }
     return (m);
 }
-static int opr3(int m)
+int opr3(int m)
 {
     int l = 0;
     printf("____________________________________________________________\n");
