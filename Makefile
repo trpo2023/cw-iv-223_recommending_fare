@@ -16,7 +16,7 @@ obj/src/libtrpo/opr.o:  src/libtrpo/opr.c
 
 test: bin/opr
 
-bin/opr: obj/src/test/opr.o obj/src/main/main.o
+bin/opr: obj/src/libtrpo/opr.o obj/src/main/main.o
 	gcc $(CFLAGS) $(CPPFLAGS) -o $@ $^ $(CPOP) $(GFLAG)
 
 clean:
