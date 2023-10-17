@@ -14,10 +14,10 @@ obj/src/libtrpo/menu.o:  src/libtrpo/menu.c
 obj/src/libtrpo/opr.o:  src/libtrpo/opr.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
 
-bin/opr: obj/src/libtrpo/opr.o obj/src/main/main.o
-	gcc $(CFLAGS) $(CPPFLAGS)  $^ $(CPOP) $(GFLAG) -o $@
-
 test: bin/opr
+
+bin/opr: obj/src/test/opr.o obj/src/main/main.o
+	gcc $(CFLAGS) $(CPPFLAGS) -o $@ $^ $(CPOP) $(GFLAG)
 
 clean:
 	rm obj/*/*/*.[oad] bin/*
