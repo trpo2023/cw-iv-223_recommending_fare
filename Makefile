@@ -2,23 +2,22 @@ CFLAGS = -Wall
 CPPFLAGS = -MMD
 GFLAG = -lm
 CPOP = -Lthirdparty -lctest
+obj/src/main/main.o:  src/main/main.c
+	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
+
+obj/src/libtrpo/command.o:  src/libtrpo/command.c
+	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
+
+obj/src/libtrpo/menu.o:  src/libtrpo/menu.c
+	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
+
+obj/src/libtrpo/opr.o:  src/libtrpo/opr.c
+	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
+
+bin/opr: obj/src/libtrpo/opr.o obj/src/main/main.o
+	gcc $(CFLAGS) $(CPPFLAGS)  $^ $(CPOP) $(GFLAG) -o $@
 
 test: bin/opr
-
-obj/src/main/main.o:  src/main/main.c
-	gcc -c $(CFLAGS) $(CPPFLAGS) -I src -o $@ $< 
-
-obj/src/libtrpo/command.o:  obj/src/libtrpo/command.c
-	gcc -c $(CFLAGS) $(CPPFLAGS) -I src -o $@ $^
-
-obj/src/libtrpo/menu.o:  obj/src/libtrpo/menu.c
-	gcc -c $(CFLAGS) $(CPPFLAGS) -I src -o $@ $^
-
-obj/src/libtrpo/opr.o:  obj/src/libtrpo/opr.c
-	gcc -c $(CFLAGS) $(CPPFLAGS) -I src -o $@ $^
-
-bin/opr: obj/src/test/opr.o obj/src/main/main.o
-	gcc $(CFLAGS) $(CPPFLAGS) -o $@ $^ $(CPOP) $(GFLAG)
 
 clean:
 	rm obj/*/*/*.[oad] bin/*
