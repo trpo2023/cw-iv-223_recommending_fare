@@ -60,7 +60,7 @@ CTEST(opr, opr3_test_3)
 
 CTEST(opr, opr3_test_4)
 {
-   int m = 4;
+    int m = 4;
     int expected = m;
     int result = opr3(m);
     ASSERT_EQUAL(expected, result);
