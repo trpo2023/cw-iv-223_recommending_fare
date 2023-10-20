@@ -52,7 +52,7 @@ int main()
 
         int m1 = opr3(v);
         int res = m1 + m;
-        
+
         if (10 < res || res < 16) {
             meg(res);
         }
