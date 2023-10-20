@@ -30,7 +30,6 @@ bin/opr: obj/src/libtrpo/test.o obj/src/libtrpo/maintest.o
 	gcc $(CFLAGS) $(CPPFLAGS)  $^ $(CPOP) $(GFLAG) -o $@
 
 
-
 clean:
 	rm obj/*/*/*.[oad] bin/*
 
