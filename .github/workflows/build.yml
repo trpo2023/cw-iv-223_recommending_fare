@@ -18,5 +18,8 @@ jobs:
       - name: Build application
         run: make
 
+      - name: Test
+        run: make test
+
       - name: Clean up
         run: make clean
