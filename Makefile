@@ -3,6 +3,9 @@ CPPFLAGS = -MMD
 GFLAG = -lm
 CPOP = -Lthirdparty
 
+bin/main: obj/src/libtrpo/command.o obj/src/main/main.o
+	gcc $(CFLAGS) $(CPPFLAGS)  $^  -o $@ 
+
 obj/src/main/graphics.o:  src/libtrpo/graphics.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
 
@@ -16,12 +19,12 @@ obj/src/libtrpo/menu.o:  src/libtrpo/menu.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
 
 obj/src/libtrpo/opr.o:  src/libtrpo/opr.c
-	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
+	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+test: bin/opr
 
 obj/src/libtrpo/test.o:  test/test.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
-
-test: bin/opr
 
 obj/src/libtrpo/maintest.o:  test/maintest.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
@@ -35,4 +38,4 @@ clean:
 
 .PHONY: clean
 
--include obj/src/libtrpo/command.d obj/src/libtrpo/menu.d obj/src/libtrpo/opr.d
+

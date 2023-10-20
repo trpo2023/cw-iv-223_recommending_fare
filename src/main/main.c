@@ -52,18 +52,18 @@ int main()
 
         int m1 = opr3(v);
         int res = m1 + m;
-        printf("%d", res);
+        
         if (10 < res || res < 16) {
-            void meg(int res);
+            meg(res);
         }
         if (20 < res || res < 26) {
-            void mts(int res);
+            mts(res);
         }
         if (30 < res || res < 36) {
-            void tel(int res);
+            tel(res);
         }
         if (40 < res || res < 46) {
-            void bil(int res);
+            bil(res);
         }
     }
 
