@@ -22,6 +22,7 @@ obj/src/libtrpo/opr.o:  src/libtrpo/opr.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 test: bin/opr
+	./bin/opr
 
 obj/src/libtrpo/test.o:  test/test.c
 	gcc -c $(CFLAGS) $(CPPFLAGS) $< -o $@ 
@@ -38,4 +39,4 @@ clean:
 
 .PHONY: clean
 
-
+-include obj/src/libtrpo/command.d obj/src/libtrpo/menu.d obj/src/libtrpo/opr.d
