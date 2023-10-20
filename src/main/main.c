@@ -1,7 +1,7 @@
-
 #include "../libtrpo/opr.h"
-#include "../libtrpo/menu.h"
+#include "../libtrpo/menu.c"
 #include "../libtrpo/command.h"
+#include "../libtrpo/graphics.h"
 
 int main()
 {
@@ -29,7 +29,9 @@ int main()
     if (vr == 1) {
         system("clear\n");
 
-        int v = opr1();
+        menu1();
+
+        int v = scanf("%d", &v);
 
         if (v == 2) {
             printf("|_____________________________________________________|\n");
@@ -37,21 +39,31 @@ int main()
             printf("|_____________________________________________________|\n");
             return (0);
         }
-        int m = 0;
-        m = opr2(m);
-        int m1 = opr3(m);
 
-        if (10 < m1 || m1 < 16) {
-            void meg(int m1);
+        menu2();
+
+        scanf("%d", &v);
+
+        int m = opr2(v);
+
+        menu3();
+
+        scanf("%d", &v);
+
+        int m1 = opr3(v);
+        int res = m1 + m;
+        printf("%d", res);
+        if (10 < res || res < 16) {
+            void meg(int res);
         }
-        if (20 < m1 || m1 < 26) {
-            void mts(int m1);
+        if (20 < res || res < 26) {
+            void mts(int res);
         }
-        if (30 < m1 || m1 < 36) {
-            void tel(int m1);
+        if (30 < res || res < 36) {
+            void tel(int res);
         }
-        if (40 < m1 || m1 < 46) {
-            void bil(int m1);
+        if (40 < res || res < 46) {
+            void bil(int res);
         }
     }
 

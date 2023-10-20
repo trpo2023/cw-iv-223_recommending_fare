@@ -1,5 +1,10 @@
-#include <stdio.h>
+#ifndef OPR_H
+#define OPR_H
 
-int opr1();
+#include <stdio.h>
+#include "opr.c"
+
 int opr2(int m);
 int opr3(int m);
+
+#endif
