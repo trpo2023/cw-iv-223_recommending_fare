@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "opr.h"
 
 int opr2(int s)
 {

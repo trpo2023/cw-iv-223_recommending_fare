@@ -1,4 +1,3 @@
-
 #include "command.h"
 
 void meg(int m1)
