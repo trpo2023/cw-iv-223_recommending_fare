@@ -1,7 +1,7 @@
-#include "../libtrpo/opr.h"
-#include "../libtrpo/menu.h"
 #include "../libtrpo/command.h"
 #include "../libtrpo/graphics.h"
+#include "../libtrpo/menu.h"
+#include "../libtrpo/opr.h"
 
 int main()
 {

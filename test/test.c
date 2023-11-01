@@ -1,6 +1,6 @@
-#include "../thirdparty/ctest.h"
 #include "../src/libtrpo/command.h"
 #include "../src/libtrpo/opr.h"
+#include "../thirdparty/ctest.h"
 
 CTEST(opr, opr2_test_1)
 {
